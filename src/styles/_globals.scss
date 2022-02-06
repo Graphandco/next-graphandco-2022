@@ -1,0 +1,60 @@
+@use "sass:map";
+@font-face {
+    font-family: "MostraNuova";
+    src: url("./fonts/mostranuova5.woff2") format("woff2"),
+        url("./fonts/mostranuova5.woff") format("woff");
+}
+@font-face {
+    font-family: "MostraNuova2";
+    src: url("./fonts/mostranuova2.woff2") format("woff2"),
+        url("./fonts/mostranuova2.woff") format("woff");
+}
+
+$breakpoints: (
+    mobile: 767px,
+    tablet: 1024px,
+);
+
+@mixin mq($key) {
+    $size: map.get($breakpoints, $key);
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+body {
+    --primary: hsl(42, 90%, 50%, 1);
+    --main-font: "MostraNuova", sans-serif;
+    --title-font: "MostraNuova2", sans-serif;
+    --text-color: hsl(205deg 15% 70%);
+
+    font-family: var(--main-font);
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+main {
+    padding-block: 80px;
+    flex-grow: 1;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    padding: 0 2vw;
+}
+
+h1 {
+    font-size: clamp(25px, 10px + 3vw, 50px);
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: var(--primary);
+    }
+}
