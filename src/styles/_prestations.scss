@@ -4,6 +4,9 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 50px;
+        @include mq(mobile) {
+            grid-template-columns: 1fr;
+        }
         h1 {
             border-left: 2px solid var(--primary);
             padding-left: 30px;
@@ -13,5 +16,19 @@
             font-size: 50px;
             color: white;
         }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding-inline: 2vw;
+    }
+    &__pack {
+        background-color: rgba(white, 0.2);
+        padding: 15px;
+        border-radius: 15px;
+        opacity: 0;
+        transform: translateY(100px);
     }
 }

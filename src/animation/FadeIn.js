@@ -5,7 +5,7 @@ import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect"
 import { TransitionContext } from "../context/TransitionContext"
 import styled from "styled-components"
 
-const FadeIn = ({ as, children, duration, delay, x, y, ease }) => {
+const FadeIn = ({ as, children, duration, delay, x, y, ease, stagger }) => {
     const el = useRef()
 
     useIsomorphicLayoutEffect(() => {
@@ -16,6 +16,7 @@ const FadeIn = ({ as, children, duration, delay, x, y, ease }) => {
             delay: delay || 0,
             duration: duration || 0.5,
             ease: ease || "power4.out",
+            stagger: stagger || 0.2,
         })
     }, [])
 

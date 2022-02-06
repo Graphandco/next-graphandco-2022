@@ -1,5 +1,26 @@
 header {
-    a {
-        color: black;
+    .header-left a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 25px;
+        font-family: var(--title-font);
+        color: white !important;
+    }
+    nav a {
+        color: var(--text-color);
+        &:hover {
+            color: white;
+        }
+        &.active:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--primary);
+        }
     }
 }

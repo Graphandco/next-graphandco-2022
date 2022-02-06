@@ -108,7 +108,7 @@ const Home = () => (
                                         }}
                                         src="/img/github-icon.svg"
                                     />
-                                    View on Github
+                                    Voir nos prestations
                                 </Button>
                             </A>
                         </ScaleInOut>
@@ -133,7 +133,7 @@ const Home = () => (
                                         px: [3, 4],
                                         py: [2, 3],
                                         width: "100%",
-                                        maxWidth: "300px",
+                                        maxWidth: "400px",
                                         display: "flex",
                                         justifyContent: "center",
                                     }}
