@@ -34,8 +34,15 @@ body {
     color: var(--text-color);
 }
 
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url(/img/bg-pattern.svg);
+}
+
 main {
-    padding-block: 80px;
     flex-grow: 1;
 }
 

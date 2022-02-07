@@ -7,7 +7,7 @@ const PrestationsPack = ({ title, details }) => {
     useIsomorphicLayoutEffect(() => {
         gsap.to(".prestations__pack", {
             x: 0,
-            y: 0,
+            y: -70,
             opacity: 1,
             duration: 0.5,
             ease: "power4.out",

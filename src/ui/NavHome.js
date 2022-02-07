@@ -29,7 +29,7 @@ const NavHome = () => {
     }, [])
 
     return (
-        <div className="header-left">
+        <div className="header__left">
             <Link href="/">
                 <a>
                     <div>

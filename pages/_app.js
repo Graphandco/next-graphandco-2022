@@ -9,18 +9,11 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <TransitionProvider>
             <TransitionLayout>
-                <Box
-                    sx={{
-                        display: "flex",
-                        minHeight: "100vh",
-                        flexDirection: "column",
-                        overflow: "hidden",
-                    }}
-                >
+                <div className="site-wrapper">
                     <Header />
                     <Component {...pageProps} />
                     <Footer />
-                </Box>
+                </div>
             </TransitionLayout>
         </TransitionProvider>
     )

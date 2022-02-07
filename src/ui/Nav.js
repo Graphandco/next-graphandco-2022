@@ -2,51 +2,30 @@ import { Box } from "theme-ui"
 import NavHome from "./NavHome"
 import NavLink from "./NavLink"
 import GithubLink from "./GithubLink"
+import useWindowDimensions from "../hooks/useWindowDimensions.ts"
+import { FaHome, FaBoxOpen, FaImages, FaEnvelope } from "react-icons/fa"
 
-const Nav = () => (
-    <Box
-        as="nav"
-        sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            py: [2, 2],
-            //bg: "rgba(0,0,0, .5)",
-            //background: "linear-gradient(180deg, rgba(0,0,0,.6), transparent)",
-            position: "relative",
-            zIndex: 999999,
-        }}
-    >
-        <Box
-            sx={{
-                width: ["100%", "50%"],
-                pl: [0, 3],
-                textAlign: ["center", "left"],
-            }}
-        >
+const Nav = () => {
+    const { width } = useWindowDimensions()
+    return (
+        <nav>
             <NavHome />
-        </Box>
-        <Box
-            sx={{
-                width: ["100%", "50%"],
-                textAlign: ["center", "right"],
-                pr: [0, 3],
-                overflow: "hidden",
-            }}
-        >
-            <NavLink href="/" delay={3}>
-                One
-            </NavLink>
-            <NavLink href="/prestations" delay={3.1}>
-                Prestations
-            </NavLink>
-            <NavLink href="/three" delay={3.2}>
-                Three
-            </NavLink>
-            <NavLink href="/docs" delay={3.3}>
-                Docs
-            </NavLink>
-        </Box>
-    </Box>
-)
+            <div className="header__right">
+                <NavLink href="/" delay={3}>
+                    {width > 767 ? "Accueil" : <FaHome />}
+                </NavLink>
+                <NavLink href="/prestations" delay={3.1}>
+                    {width > 767 ? "Prestations" : <FaBoxOpen />}
+                </NavLink>
+                <NavLink href="/realisations" delay={3.2}>
+                    {width > 767 ? "Realisations" : <FaImages />}
+                </NavLink>
+                <NavLink href="/docs" delay={3.3}>
+                    {width > 767 ? "Contact" : <FaEnvelope />}
+                </NavLink>
+            </div>
+        </nav>
+    )
+}
 
 export default Nav
