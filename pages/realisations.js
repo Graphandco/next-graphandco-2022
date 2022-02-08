@@ -4,12 +4,12 @@ const RealisationsPage = () => {
     return (
         <Wrapper
             url="https://tweenpages.vercel.app/three"
-            title="TweenPages | Transition 3"
+            title="Réalisations | Graph and Co"
             description="Demo of TweenPages with a complex transition to page number three"
             twitter="johnpolacek"
             imageUrl="https://tweenpages.vercel.app/project-logo.png"
             imageAlt="TweenPages Logo"
-            background="linear-gradient(90deg,green,black)"
+            background="linear-gradient(90deg,#052233,black)"
         >
             <Realisations />
         </Wrapper>

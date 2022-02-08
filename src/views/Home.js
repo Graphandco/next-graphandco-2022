@@ -5,6 +5,7 @@ import ImplodeExplodeInOut from "../animation/ImplodeExplodeInOut"
 import FadeInOutUp from "../animation/FadeInOutUp"
 import ScaleInOut from "../animation/ScaleInOut"
 import HomeAnimation from "../animation/HomeAnimation"
+import { FaHome, FaBoxOpen, FaImages, FaEnvelope } from "react-icons/fa"
 
 const Home = () => (
     <Flex
@@ -26,12 +27,7 @@ const Home = () => (
         >
             <Box>
                 <FadeInOutUp>
-                    <Text
-                        as="h1"
-                        sx={{ fontSize: [7, 8, 9], fontWeight: 100, py: 4 }}
-                    >
-                        Graph and Co
-                    </Text>
+                    <div className="site-heading">Création de sites web</div>
                 </FadeInOutUp>
                 <div className="lead">
                     <ImplodeExplodeInOut target="p">
@@ -41,27 +37,7 @@ const Home = () => (
                         </p>
                     </ImplodeExplodeInOut>
                 </div>
-                <Box aria-label="Nous sommes spécialisés dans la réalisation de sites web modernes et intuitifs.">
-                    <ImplodeExplodeInOut target="#subhead">
-                        {/* <Text
-                            aria-hidden="true"
-                            id="subhead"
-                            as="h2"
-                            sx={{
-                                fontSize: [2, 3, 4],
-                                fontWeight: 500,
-                                pb: [4, 5],
-                            }}
-                        >
-                            Nous sommes spécialisés dans la réalisation de sites
-                            web modernes et intuitifs.
-                        </Text> */}
-                        {/* <p id="subhead">
-                            Nous sommes spécialisés dans la réalisation de sites
-                            web modernes et intuitifs.
-                        </p> */}
-                    </ImplodeExplodeInOut>
-                </Box>
+
                 <Flex
                     sx={{
                         flexDirection: ["column", "column", "column", "row"],
@@ -96,9 +72,10 @@ const Home = () => (
                                         maxWidth: "300px",
                                         display: "flex",
                                         justifyContent: "center",
+                                        gap: "5px",
                                     }}
                                 >
-                                    <Image
+                                    {/* <Image
                                         width="40"
                                         height="40"
                                         sx={{
@@ -107,7 +84,8 @@ const Home = () => (
                                             opacity: 0.75,
                                         }}
                                         src="/img/github-icon.svg"
-                                    />
+                                    /> */}
+                                    <FaBoxOpen />
                                     Voir nos prestations
                                 </Button>
                             </A>

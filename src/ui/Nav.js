@@ -18,7 +18,7 @@ const Nav = () => {
                     {width > 767 ? "Prestations" : <FaBoxOpen />}
                 </NavLink>
                 <NavLink href="/realisations" delay={3.2}>
-                    {width > 767 ? "Realisations" : <FaImages />}
+                    {width > 767 ? "Réalisations" : <FaImages />}
                 </NavLink>
                 <NavLink href="/docs" delay={3.3}>
                     {width > 767 ? "Contact" : <FaEnvelope />}

@@ -1,0 +1,20 @@
+.realisations__grid {
+    --color1: hsl(215deg 60% 27%);
+    --color2: hsl(215deg 50% 27%);
+    --color3: hsl(215deg 50% 45%);
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
+    color: white;
+    width: 100%;
+    @include mq(tablet) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include mq(mobile) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .op5 {
+        opacity: 0.5;
+    }
+}
