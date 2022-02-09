@@ -52,10 +52,30 @@ main {
     width: 100%;
     padding: 0 2vw;
 }
-
+.header-section {
+    padding: 50px 2vw;
+    h1 {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: calc(300px + 5vw);
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                var(--primary) 0,
+                hsla(0, 0%, 100%, 0)
+            );
+            border-radius: 50px;
+        }
+    }
+}
 h1 {
     font-size: clamp(25px, 10px + 3vw, 50px);
     color: white;
+    font-family: var(--title-font);
 }
 
 a,
