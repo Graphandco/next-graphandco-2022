@@ -18,7 +18,7 @@ const Nav = () => {
                 <NavLink href="/realisations" delay={3.2}>
                     {responsive === "mobile" ? <FaImages /> : "Réalisations"}
                 </NavLink>
-                <NavLink href="/docs" delay={3.3}>
+                <NavLink href="/contact" delay={3.3}>
                     {responsive === "mobile" ? <FaEnvelope /> : "Contact"}
                 </NavLink>
             </div>
