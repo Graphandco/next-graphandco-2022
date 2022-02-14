@@ -3,17 +3,12 @@
    License: none (public domain)
 */
 body {
-    background-color: white;
     cursor: default;
     box-sizing: border-box;
 }
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 html {
-    font-family: sans-serif;
-
-    line-height: 1.15;
-
     -ms-text-size-adjust: 100%;
 
     -webkit-text-size-adjust: 100%;
@@ -266,10 +261,6 @@ template {
 }
 input:focus,
 input.__focus {
-    outline: 4px solid rgba(117, 170, 255, 0.5);
-}
-button:focus,
-button.__focus {
     outline: 4px solid rgba(117, 170, 255, 0.5);
 }
 button:active,

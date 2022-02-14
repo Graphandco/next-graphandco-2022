@@ -30,10 +30,11 @@ header {
             }
             a {
                 color: var(--text-color);
+                transition: 0.3s;
                 &:hover {
                     color: white;
                 }
-                &.active:before {
+                &:before {
                     content: "";
                     position: absolute;
                     top: 50%;
@@ -43,6 +44,12 @@ header {
                     border-radius: 50%;
                     background-color: var(--primary);
                     z-index: -1;
+                    transition: 0.3s;
+                    opacity: 0;
+                }
+                &:hover:before,
+                &.active:before {
+                    opacity: 1;
                 }
                 @include mq(mobile) {
                     padding: 15px 10px;
