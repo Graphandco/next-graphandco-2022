@@ -1,12 +1,9 @@
-import Link from "next/link"
-import { Flex, Box, Text, Button, Image, Link as A } from "theme-ui"
-import FadeIn from "../animation/FadeIn"
-import FadeInOut from "../animation/FadeInOut"
-import FlyInOut from "../animation/FlyInOut"
-import ScaleInOut from "../animation/ScaleInOut"
+import Image from "next/image"
+import FadeInOut from "../../animation/FadeInOut"
 import { GiMuscleUp } from "react-icons/gi"
 import { IoIosRocket } from "react-icons/io"
 import PrestationsPack from "./PrestationsPack"
+import Pagetitle from "../../ui/PageTitle"
 
 const Prestations = () => {
     const packs = [
@@ -50,13 +47,13 @@ const Prestations = () => {
     return (
         <>
             <section className="prestations">
-                <div className="prestations__hero container">
-                    <FadeIn
+                <Pagetitle title="Nos prestations" />
+                {/* <FadeIn
                         className="prestations__title"
                         duration={0.5}
                         y={1200}
                         delay={0.5}
-                    >
+                        >
                         <h1>
                             <FlyInOut x={-500} delay={0.6}>
                                 <span>Découvrez</span>
@@ -65,30 +62,47 @@ const Prestations = () => {
                                 <span>Nos</span>
                             </FlyInOut>
                             <FlyInOut x={-500} delay={0.8}>
-                                <span>Offres</span>
+                            <span>Offres</span>
                             </FlyInOut>
-                        </h1>
-                    </FadeIn>
-                    <div className="prestations__lead">
+                            </h1>
+                        </FadeIn> */}
+                <p className="prestations__lead container">
+                    <div className="prestations__lead__image">
+                        <Image
+                            width={200}
+                            height={125}
+                            src="/img/prestations-lead.svg"
+                        />
+                    </div>
+                    <div className="prestations__lead__content">
+                        Nous mettons à votre disposition le site qui vous
+                        correspond le mieux. Nous adaptons nos prestations en
+                        fonction de vos besoins. Choisissez votre pack, tout est
+                        personnalisable afin de convenir à vos attentes, qu'il
+                        s'agisse d'un site vitrine classique ou d'un site avec
+                        des fonctionnalités plus poussées, nous avons forcément
+                        le site taillé pour vous !
+                    </div>
+                </p>
+                <div className="prestations__hero container">
+                    <div className="prestations__hero__row">
                         <FadeInOut x={-20} delay={2}>
                             <GiMuscleUp />
                         </FadeInOut>
                         <FadeInOut y={5} delay={2.25}>
-                            <p>
-                                Vous êtes novice en informatique ? Aucun
-                                problème, nous vous montrons à quel point éditer
-                                votre site est un vrai jeu d'enfant !
-                            </p>
+                            Vous êtes novice en informatique ? Aucun problème,
+                            nous vous montrons à quel point éditer votre site
+                            est un vrai jeu d'enfant !
                         </FadeInOut>
+                    </div>
+                    <div className="prestations__hero__row">
                         <FadeInOut x={-20} delay={2.5}>
                             <IoIosRocket />
                         </FadeInOut>
                         <FadeInOut y={5} delay={2.75}>
-                            <p>
-                                Vous êtes un utilisateur aguerri ? Vous serez
-                                ravi du niveau de personnalisation que le site
-                                vous propose.
-                            </p>
+                            Vous êtes un utilisateur aguerri ? Vous serez ravi
+                            du niveau de personnalisation que le site vous
+                            propose.
                         </FadeInOut>
                     </div>
                 </div>

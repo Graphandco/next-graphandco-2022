@@ -1,5 +1,5 @@
 import Wrapper from "../src/layout/Wrapper"
-import Prestations from "../src/views/Prestations"
+import Prestations from "../src/views/Prestations/Prestations"
 
 const PrestationsPage = () => (
     <Wrapper
