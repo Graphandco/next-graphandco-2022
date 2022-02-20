@@ -67,14 +67,22 @@ const Prestations = () => {
                             </h1>
                         </FadeIn> */}
                 <p className="prestations__lead container">
-                    <div className="prestations__lead__image">
+                    <FadeInOut
+                        y={-20}
+                        delay={1.8}
+                        className="prestations__lead__image"
+                    >
                         <Image
                             width={200}
                             height={125}
                             src="/img/prestations-lead.svg"
                         />
-                    </div>
-                    <div className="prestations__lead__content">
+                    </FadeInOut>
+                    <FadeInOut
+                        y={-20}
+                        delay={1.8}
+                        className="prestations__lead__content"
+                    >
                         Nous mettons à votre disposition le site qui vous
                         correspond le mieux. Nous adaptons nos prestations en
                         fonction de vos besoins. Choisissez votre pack, tout est
@@ -82,7 +90,7 @@ const Prestations = () => {
                         s'agisse d'un site vitrine classique ou d'un site avec
                         des fonctionnalités plus poussées, nous avons forcément
                         le site taillé pour vous !
-                    </div>
+                    </FadeInOut>
                 </p>
                 <div className="prestations__hero container">
                     <div className="prestations__hero__row">

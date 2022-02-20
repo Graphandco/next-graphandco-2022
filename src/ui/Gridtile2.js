@@ -17,9 +17,11 @@ const Tile = styled.div.attrs({ className: "grid-tile" })`
     overflow: hidden;
     width: 100%;
     height: 100%;
-    min-height: 150px;
+    min-height: 250px;
     padding: 2vw;
-    background-color: ${(props) => props.bg && props.bg};
+    background: ${(props) => props.bg && props.bg};
+    background-size: cover;
+    background-position: center top;
     isolation: isolate;
     &:after {
         content: "";

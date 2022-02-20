@@ -14,7 +14,7 @@ const Realisations = () => {
                 <h1>Nos réalisations</h1>
             </div>
             <section className="realisations__grid">
-                <GridTile2 bg="var(--color1)">
+                <GridTile2 bg="url(/projects/3fp.jpg)">
                     <Image
                         className="op5"
                         src="/img/icons/arrow_upward_24dp.svg"
@@ -23,7 +23,15 @@ const Realisations = () => {
                     />
                 </GridTile2>
                 <GridTile2 bg="var(--color2)">
-                    <Text
+                    <Image
+                        className="op5"
+                        width={48}
+                        height={48}
+                        src="/img/icons/auto_awesome_24dp.svg"
+                    />
+                </GridTile2>
+                <GridTile2 bg="url(/projects/loide-guitare.jpg)">
+                    {/* <Text
                         as="p"
                         sx={{
                             fontWeight: 900,
@@ -36,7 +44,7 @@ const Realisations = () => {
                         }}
                     >
                         Created by Graph and Co
-                    </Text>
+                    </Text> */}
                 </GridTile2>
                 <GridTile2 bg="var(--color3)">
                     <Text
@@ -49,15 +57,6 @@ const Realisations = () => {
                     >
                         from Chicago
                     </Text>
-                </GridTile2>
-
-                <GridTile2 bg="var(--color1)">
-                    <Image
-                        className="op5"
-                        width={48}
-                        height={48}
-                        src="/img/icons/auto_awesome_24dp.svg"
-                    />
                 </GridTile2>
 
                 <GridTile2 bg="var(--color4)">

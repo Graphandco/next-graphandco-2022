@@ -1,3 +1,4 @@
+import FadeInOut from "../../animation/FadeInOut"
 import Pagetitle from "../../ui/PageTitle"
 import ContactForm from "./Contactform"
 
@@ -6,7 +7,9 @@ const Contact = () => {
         <>
             <section className="contact">
                 <Pagetitle title="Nous contacter" />
-                <ContactForm />
+                <FadeInOut x={-20} delay={1.8}>
+                    <ContactForm />
+                </FadeInOut>
             </section>
         </>
     )
