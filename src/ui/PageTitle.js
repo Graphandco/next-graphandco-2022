@@ -3,6 +3,7 @@ import { gsap } from "gsap"
 import useIsomorphicLayoutEffect from "../animation/useIsomorphicLayoutEffect"
 import styled from "styled-components"
 import ImplodeExplodeInOut from "../animation/ImplodeExplodeInOut"
+import FadeInOut from "../animation/FadeInOut"
 
 const Pagetitle = ({ title }) => {
     const lineRef = useRef()
@@ -22,7 +23,9 @@ const Pagetitle = ({ title }) => {
             <ImplodeExplodeInOut delay=".5" target="h1">
                 {title}
             </ImplodeExplodeInOut>
-            <TitleLine ref={lineRef} />
+            <FadeInOut>
+                <TitleLine ref={lineRef} />
+            </FadeInOut>
         </Title>
     )
 }

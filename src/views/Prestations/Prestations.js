@@ -66,7 +66,7 @@ const Prestations = () => {
                             </FlyInOut>
                             </h1>
                         </FadeIn> */}
-                <p className="prestations__lead container">
+                <div className="prestations__lead container">
                     <FadeInOut
                         y={-20}
                         delay={1.8}
@@ -91,7 +91,7 @@ const Prestations = () => {
                         des fonctionnalités plus poussées, nous avons forcément
                         le site taillé pour vous !
                     </FadeInOut>
-                </p>
+                </div>
                 <div className="prestations__hero container">
                     <div className="prestations__hero__row">
                         <FadeInOut x={-20} delay={2}>

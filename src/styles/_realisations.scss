@@ -21,4 +21,42 @@
     .op5 {
         opacity: 0.5;
     }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 1vw;
+        color: var(--text-color);
+        color: white;
+
+        &__title {
+            color: white;
+            text-transform: uppercase;
+            font-family: var(--title-font);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        &__link {
+            text-align: right;
+            a {
+                color: whte;
+                font-size: 16px;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: 0.3s;
+            }
+        }
+    }
 }

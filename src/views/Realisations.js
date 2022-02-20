@@ -4,23 +4,38 @@ import GridTile from "../ui/GridTile"
 import Image from "next/image"
 import GridTile2 from "../ui/Gridtile2"
 import { useWindowSize } from "../hooks/useWindowSize"
+import Pagetitle from "../ui/PageTitle"
+import { FaLongArrowAltRight } from "react-icons/fa"
 
 const Realisations = () => {
     const responsive = useWindowSize()
 
     return (
         <>
-            <div className="header-section container">
-                <h1>Nos réalisations</h1>
-            </div>
+            <Pagetitle title={"Nos réalisations"} />
             <section className="realisations__grid">
-                <GridTile2 bg="url(/projects/3fp.jpg)">
+                <GridTile2 bg="url(/projects/loide-guitare.jpg)" siteContent>
                     <Image
                         className="op5"
                         src="/img/icons/arrow_upward_24dp.svg"
                         width={48}
                         height={48}
                     />
+                    <div className="realisations__grid__content">
+                        <div className="realisations__grid__content__title">
+                            Loïde Guitare
+                        </div>
+                        <div className="realisations__grid__content__description">
+                            Site vitrine pour un créateur de guitares originales
+                            en tissu
+                        </div>
+                        <div className="realisations__grid__content__link">
+                            <a href="https://loide-guitare.fr/" target="blank">
+                                <FaLongArrowAltRight />
+                                <span>Voir le site</span>
+                            </a>
+                        </div>
+                    </div>
                 </GridTile2>
                 <GridTile2 bg="var(--color2)">
                     <Image
@@ -30,7 +45,24 @@ const Realisations = () => {
                         src="/img/icons/auto_awesome_24dp.svg"
                     />
                 </GridTile2>
-                <GridTile2 bg="url(/projects/loide-guitare.jpg)">
+                <GridTile2 bg="url(/projects/willow-tarot.jpg)" siteContent>
+                    <div className="realisations__grid__content">
+                        <div className="realisations__grid__content__title">
+                            Willow Tarot
+                        </div>
+                        <div className="realisations__grid__content__description">
+                            Site vitrine pour un créateur de guitares originales
+                            en tissu
+                        </div>
+                        <div className="realisations__grid__content__link">
+                            <a href="https://loide-guitare.fr/" target="blank">
+                                <FaLongArrowAltRight />
+                                <span>Voir le site</span>
+                            </a>
+                        </div>
+                    </div>
+                </GridTile2>
+                <GridTile2 bg="url(/projects/peche-exotique.jpg)">
                     {/* <Text
                         as="p"
                         sx={{
@@ -46,18 +78,6 @@ const Realisations = () => {
                         Created by Graph and Co
                     </Text> */}
                 </GridTile2>
-                <GridTile2 bg="var(--color3)">
-                    <Text
-                        sx={{
-                            fontWeight: 900,
-                            fontSize: [1, 2],
-                            textAlign: "center",
-                            px: 3,
-                        }}
-                    >
-                        from Chicago
-                    </Text>
-                </GridTile2>
 
                 <GridTile2 bg="var(--color4)">
                     <Image
@@ -65,6 +85,14 @@ const Realisations = () => {
                         width={48}
                         height={48}
                         src="/img/icons/code_24dp.svg"
+                    />
+                </GridTile2>
+                <GridTile2 bg="url(/projects/3fp.jpg)">
+                    <Image
+                        className="op5"
+                        width={48}
+                        height={48}
+                        src="/img/icons/lightbulb_24dp.svg"
                     />
                 </GridTile2>
                 <GridTile2 bg="var(--color3)">
@@ -76,15 +104,7 @@ const Realisations = () => {
                     />
                 </GridTile2>
 
-                <GridTile2 bg="var(--color4)">
-                    <Image
-                        className="op5"
-                        width={48}
-                        height={48}
-                        src="/img/icons/lightbulb_24dp.svg"
-                    />
-                </GridTile2>
-                <GridTile2 bg="var(--color2)">
+                <GridTile2 bg="url(/projects/boatman.jpg)">
                     <Image
                         className="op5"
                         width={48}
@@ -92,34 +112,24 @@ const Realisations = () => {
                         src="/img/icons/phone_android_24dp.svg"
                     />
                 </GridTile2>
-                <GridTile2 bg="var(--color2)">
-                    <Text sx={{ display: ["none", "inline"] }}>follow </Text>
-                    <A
-                        sx={{
-                            fontWeight: 600,
-                            fontSize: ["14px", 0, 1],
-                            color: "greenyellow",
-                            ml: 2,
-                        }}
-                        href="https://twitter.com/johnpolacek"
-                    >
-                        @johnpolacek
-                    </A>
-                </GridTile2>
-                <GridTile2 bg="var(--color1)">
-                    <Image
-                        className="op5"
-                        width={40}
-                        height={40}
-                        src="/img/icons/thumb_up_24dp.svg"
-                    />
-                </GridTile2>
-                <GridTile2 bg="var(--color3)">
+                <GridTile2 bg="url(/projects/la-toscana.jpg)"></GridTile2>
+                <GridTile2
+                    bgPosition="left top"
+                    bg="url(/projects/burgerio.jpg)"
+                >
                     <Image
                         className="op5"
                         width={48}
                         height={48}
                         src="/img/icons/trending_up_24dp.svg"
+                    />
+                </GridTile2>
+                <GridTile2 bg="url(/projects/fylo.jpg)">
+                    <Image
+                        className="op5"
+                        width={40}
+                        height={40}
+                        src="/img/icons/thumb_up_24dp.svg"
                     />
                 </GridTile2>
                 <GridTile2 bg="var(--color1)">
@@ -143,7 +153,10 @@ const Realisations = () => {
                         src="/img/icons/emoji_people_24dp.svg"
                     />
                 </GridTile2>
-                <GridTile2 bg="var(--color4)" display={["none", "flex"]}>
+                <GridTile2
+                    bg="url(/projects/barber-shop.jpg)"
+                    bgPosition="left center"
+                >
                     <Image
                         className="op5"
                         width={48}

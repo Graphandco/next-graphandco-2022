@@ -1,14 +1,19 @@
 import RotateInOut3D from "../animation/RotateInOut3D"
 import styled from "styled-components"
 
-const GridTile2 = ({ children, bg }) => (
-    <RotateInOut3D
-        duration={1 + Math.random()}
-        delay={0.5 + Math.random()}
-        offsetY={120}
-    >
-        <Tile bg={bg}>{children}</Tile>
-    </RotateInOut3D>
+const GridTile2 = ({ children, bg, bgPosition, siteContent }) => (
+    <>
+        {console.log(siteContent)}
+        <RotateInOut3D
+            duration={1 + Math.random()}
+            delay={0.5 + Math.random()}
+            offsetY={120}
+        >
+            <Tile bg={bg} bgPosition={bgPosition} siteContent={siteContent}>
+                {children}
+            </Tile>
+        </RotateInOut3D>
+    </>
 )
 
 const Tile = styled.div.attrs({ className: "grid-tile" })`
@@ -21,8 +26,24 @@ const Tile = styled.div.attrs({ className: "grid-tile" })`
     padding: 2vw;
     background: ${(props) => props.bg && props.bg};
     background-size: cover;
-    background-position: center top;
+    background-position: ${(props) =>
+        props.bgPosition ? props.bgPosition : "center top"};
     isolation: isolate;
+    &:before {
+        content: "";
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: ${(props) =>
+            props.siteContent
+                ? "linear-gradient(transparent 0%, rgba(0,0,0,0.8))"
+                : "transparent"};
+        /* background: linear-gradient(transparent, rgba(0, 0, 0, 0.9)); */
+        z-index: -1;
+    }
     &:after {
         content: "";
         position: absolute;
