@@ -33,7 +33,7 @@ const Pagetitle = ({ title }) => {
 const Title = styled.h1`
     position: relative;
     padding: 50px 2vw;
-    font-size: clamp(25px, 10px + 3vw, 50px);
+    font-size: clamp(38px, 28px + 2vw, 50px);
     color: white;
     font-family: var(--title-font);
 `

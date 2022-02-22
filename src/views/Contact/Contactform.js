@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import useInput from "../../hooks/useInput"
-import Button from "../../ui/Button"
+import LinkButton from "../../ui/LinkButton"
 
 const ContactForm = () => {
     const [name, resetName, nameAttribs] = useInput("name", "")
@@ -69,7 +69,7 @@ const ContactForm = () => {
                             required
                         />
                     </div>
-                    <Button>Envoyer</Button>
+                    <LinkButton name="Envoyer" />
                 </form>
                 <div className="contact-form__image">
                     <Image

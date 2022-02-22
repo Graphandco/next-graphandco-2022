@@ -9,12 +9,15 @@
     grid-auto-rows: 1fr;
     color: white;
     width: 100%;
-    @include mq(tablet) {
+    @media screen and (max-width: 1650px) {
         grid-template-columns: repeat(3, 1fr);
     }
-    @include mq(mobile) {
+    @include mq(tablet) {
         grid-template-columns: repeat(2, 1fr);
     }
+    // @include mq(mobile) {
+    //     grid-template-columns: repeat(1, 1fr);
+    // }
     @media screen and (max-width: 600px) {
         grid-template-columns: repeat(1, 1fr);
     }

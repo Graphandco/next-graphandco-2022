@@ -1,29 +1,67 @@
 import Link from "next/link"
 import { Flex, Box, Text, Button, Link as A } from "theme-ui"
-import GridTile from "../ui/GridTile"
 import Image from "next/image"
-import GridTile2 from "../ui/Gridtile2"
-import { useWindowSize } from "../hooks/useWindowSize"
-import Pagetitle from "../ui/PageTitle"
+import { useWindowSize } from "../../hooks/useWindowSize"
 import { FaLongArrowAltRight } from "react-icons/fa"
+import GridTile2 from "../../ui/Gridtile2"
+import PageTitle from "../../ui/PageTitle"
+import SiteTile from "./SiteTile"
 
 const Realisations = () => {
     const responsive = useWindowSize()
 
+    const data = [
+        {
+            id: 1,
+            name: "Loïde Guitare",
+            desc: "Site vitrine pour un créateur de guitares originales en tissu",
+            image: "/projects/loide-guitare.jpg",
+            link: "https://loide-guitare.fr/",
+        },
+        {
+            id: 2,
+            name: "Willow Tarot",
+            desc: "Site d’accompagnement à travers la taromancie.",
+            link: "https://willow-tarot.fr/",
+        },
+    ]
+
     return (
         <>
-            <Pagetitle title={"Nos réalisations"} />
+            <PageTitle title={"Nos réalisations"} />
             <section className="realisations__grid">
-                <GridTile2 bg="url(/projects/loide-guitare.jpg)" siteContent>
+                <SiteTile
+                    name="Loïde Guitare"
+                    desc="Site vitrine pour un créateur de guitares originales en tissu"
+                    image="/projects/loide-guitare.jpg"
+                    link="https://loide-guitare.fr/"
+                />
+                <GridTile2 siteContent>
                     <Image
                         className="op5"
-                        src="/img/icons/arrow_upward_24dp.svg"
-                        width={48}
-                        height={48}
+                        src="/projects/loide-guitare.jpg"
+                        width={600}
+                        height={372}
                     />
                     <div className="realisations__grid__content">
                         <div className="realisations__grid__content__title">
                             Loïde Guitare
+                        </div>
+                        <div className="realisations__grid__content__description">
+                            {data[0].desc}
+                        </div>
+                        <div className="realisations__grid__content__link">
+                            <a href={data[0].link} target="blank">
+                                <FaLongArrowAltRight />
+                                <span>Voir le site</span>
+                            </a>
+                        </div>
+                    </div>
+                </GridTile2>
+                <GridTile2 bg="url(/projects/willow-tarot.jpg)" siteContent>
+                    <div className="realisations__grid__content">
+                        <div className="realisations__grid__content__title">
+                            Willow Tarot
                         </div>
                         <div className="realisations__grid__content__description">
                             Site vitrine pour un créateur de guitares originales
@@ -44,23 +82,6 @@ const Realisations = () => {
                         height={48}
                         src="/img/icons/auto_awesome_24dp.svg"
                     />
-                </GridTile2>
-                <GridTile2 bg="url(/projects/willow-tarot.jpg)" siteContent>
-                    <div className="realisations__grid__content">
-                        <div className="realisations__grid__content__title">
-                            Willow Tarot
-                        </div>
-                        <div className="realisations__grid__content__description">
-                            Site vitrine pour un créateur de guitares originales
-                            en tissu
-                        </div>
-                        <div className="realisations__grid__content__link">
-                            <a href="https://loide-guitare.fr/" target="blank">
-                                <FaLongArrowAltRight />
-                                <span>Voir le site</span>
-                            </a>
-                        </div>
-                    </div>
                 </GridTile2>
                 <GridTile2 bg="url(/projects/peche-exotique.jpg)">
                     {/* <Text

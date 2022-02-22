@@ -73,8 +73,8 @@ const Prestations = () => {
                         className="prestations__lead__image"
                     >
                         <Image
-                            width={200}
-                            height={125}
+                            width={300}
+                            height={190}
                             src="/img/prestations-lead.svg"
                         />
                     </FadeInOut>

@@ -1,5 +1,5 @@
 import Wrapper from "../src/layout/Wrapper"
-import Realisations from "../src/views/Realisations"
+import Realisations from "../src/views/realisations/Realisations"
 const RealisationsPage = () => {
     return (
         <Wrapper

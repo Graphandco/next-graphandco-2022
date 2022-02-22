@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 const GridTile2 = ({ children, bg, bgPosition, siteContent }) => (
     <>
-        {console.log(siteContent)}
         <RotateInOut3D
             duration={1 + Math.random()}
             delay={0.5 + Math.random()}
@@ -22,8 +21,8 @@ const Tile = styled.div.attrs({ className: "grid-tile" })`
     overflow: hidden;
     width: 100%;
     height: 100%;
-    min-height: 250px;
-    padding: 2vw;
+    /* min-height: 250px;
+    padding: 2vw; */
     background: ${(props) => props.bg && props.bg};
     background-size: cover;
     background-position: ${(props) =>

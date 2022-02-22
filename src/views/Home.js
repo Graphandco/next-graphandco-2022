@@ -6,6 +6,7 @@ import FadeInOutUp from "../animation/FadeInOutUp"
 import ScaleInOut from "../animation/ScaleInOut"
 import HomeAnimation from "../animation/HomeAnimation"
 import { FaHome, FaBoxOpen, FaImages, FaEnvelope } from "react-icons/fa"
+import LinkButton from "../ui/LinkButton"
 
 const Home = () => (
     <Flex
@@ -38,6 +39,13 @@ const Home = () => (
                     </ImplodeExplodeInOut>
                 </div>
 
+                <ScaleInOut as="div" delay={0} yellow>
+                    <LinkButton
+                        name="Voir nos prestations"
+                        link="/prestations"
+                    />
+                </ScaleInOut>
+
                 <Flex
                     sx={{
                         flexDirection: ["column", "column", "column", "row"],
@@ -47,7 +55,7 @@ const Home = () => (
                         mx: "auto",
                     }}
                 >
-                    <Box sx={{ mr: [0, 0, 0, 3] }}>
+                    {/* <Box sx={{ mr: [0, 0, 0, 3] }}>
                         <ScaleInOut as="div" delay={4}>
                             <A
                                 sx={{
@@ -75,16 +83,6 @@ const Home = () => (
                                         gap: "5px",
                                     }}
                                 >
-                                    {/* <Image
-                                        width="40"
-                                        height="40"
-                                        sx={{
-                                            ml: [-2, -3, -2],
-                                            mr: [2, 3, 2],
-                                            opacity: 0.75,
-                                        }}
-                                        src="/img/github-icon.svg"
-                                    /> */}
                                     <FaBoxOpen />
                                     Voir nos prestations
                                 </Button>
@@ -130,7 +128,7 @@ const Home = () => (
                                 </Button>
                             </A>
                         </Link>
-                    </ScaleInOut>
+                    </ScaleInOut> */}
                 </Flex>
             </Box>
         </Flex>
