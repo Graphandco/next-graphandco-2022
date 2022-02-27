@@ -1,6 +1,6 @@
-import React from "react"
 import Image from "next/image"
 import FadeInOut from "../../animation/FadeInOut"
+import LinkButton from "../../ui/LinkButton"
 
 const Competences = () => {
     const content = [
@@ -22,6 +22,12 @@ const Competences = () => {
                                 dangerouslySetInnerHTML={{ __html: p }}
                             ></p>
                         ))}
+                        <div className="competences-cta">
+                            <LinkButton
+                                name="Voir nos réalisations"
+                                link="/realisations"
+                            />
+                        </div>
                     </div>
                     <div className="competences-image">
                         <FadeInOut

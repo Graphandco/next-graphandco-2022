@@ -1,10 +1,9 @@
 import Link from "next/link"
 import styled from "styled-components"
 
-const LinkButton = ({ name, newTab, link, yellow }) => {
+const LinkButton = ({ name, newTab, link }) => {
     return (
-        <Button yellow={yellow}>
-            {console.log(yellow)}
+        <Button>
             {link ? (
                 <Link href={link}>
                     <a target={`${newTab ? "_blank" : "_self"}`}>
@@ -19,36 +18,40 @@ const LinkButton = ({ name, newTab, link, yellow }) => {
 }
 
 const Button = styled.button`
-    background: none;
+    padding: 15px 25px;
+    background: transparent;
     outline: none;
-    border: none;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
     cursor: pointer;
-    color: ${(props) => (props.yellow ? "hsl(42, 90%, 50%, 1)" : "white")};
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--primary);
+        border-radius: 50px;
+        z-index: 0;
+        clip-path: circle(0% at 0 100%);
+        transition: 0.4s ease-in-out;
+    }
+
     span {
         padding-inline: 10px;
         position: relative;
+        z-index: 1;
         text-transform: uppercase;
         font-family: var(--title-font);
-        font-size: 1.5rem;
-
-        &:after {
-            content: "";
-            position: absolute;
-            background-image: url(/img/curly-arrow.png);
-            right: 0;
-            bottom: -25px;
-            width: 100%;
-            height: 30px;
-            background-size: cover;
-            background-position-x: right;
-            background-repeat: no-repeat;
-            filter: brightness(500);
+        font-size: 20px;
+        color: var(--primary);
+        transition: 0.4s ease-in-out;
+    }
+    &:hover {
+        &:before {
+            clip-path: circle(150% at 0 100%);
         }
-        &:hover {
-            color: var(--primary);
-            &:after {
-                filter: brightness(100%);
-            }
+        span {
+            color: hsl(207deg 81% 11%);
         }
     }
 `
