@@ -16,6 +16,7 @@
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^12.0.8",
     "gsap": "npm:@gsap/business@^3.7.1",
+    "lottie-react": "^2.2.1",
     "next": "^12.0.8",
     "prism-react-renderer": "^1.2.1",
     "prop-types": "^15.8.1",
@@ -27,9 +28,9 @@
     "theme-ui": "^0.13.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
     "onchange": "^7.1.0",
-    "prettier": "^2.4.0",
-    "babel-plugin-styled-components": "^1.8.0"
+    "prettier": "^2.4.0"
   },
   "resolutions": {
     "@babel/runtime": "^7.12.5"

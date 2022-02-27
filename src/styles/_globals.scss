@@ -23,7 +23,7 @@ $breakpoints: (
 }
 
 body {
-    --primary: hsl(42, 90%, 50%, 1);
+    --primary: hsl(42, 90%, 50%);
     --secondary: hsl(206, 44%, 21%, 1);
     --main-font: "MostraNuova", sans-serif;
     --title-font: "MostraNuova2", sans-serif;
@@ -51,7 +51,7 @@ main {
     margin: 0 auto;
     max-width: 1600px;
     width: 100%;
-    padding: 0 2vw;
+    padding: 0 2.5vw;
 }
 .header-section {
     padding: 50px 2vw;
@@ -75,6 +75,12 @@ main {
 }
 h1 {
     font-size: clamp(25px, 10px + 3vw, 50px);
+    color: white;
+    font-family: var(--title-font);
+}
+h2 {
+    margin: 0;
+    font-size: clamp(30px, 15px + 2vw, 40px);
     color: white;
     font-family: var(--title-font);
 }

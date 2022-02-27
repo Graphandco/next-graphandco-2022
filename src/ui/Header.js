@@ -1,9 +1,11 @@
 import Nav from "./Nav"
 
 const Header = (props) => (
-  <header>
-    <Nav />
-  </header>
+    <header>
+        <div className="container">
+            <Nav />
+        </div>
+    </header>
 )
 
 export default Header

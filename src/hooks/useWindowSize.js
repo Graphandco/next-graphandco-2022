@@ -1,9 +1,9 @@
-import React, { useLayoutEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 const useWindowSize = () => {
     const [size, setSize] = useState([0, 0])
     const [isResponsive, setIsResponsive] = useState("desktop")
-    useLayoutEffect(() => {
+    useEffect(() => {
         function updateSize() {
             // console.log("updateSize", window.innerWidth, window.innerHeight)
             setSize([window.innerWidth, window.innerHeight])

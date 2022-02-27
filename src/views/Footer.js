@@ -46,13 +46,13 @@ const Footer = () => {
                     <div className="footer__column__title">Liens</div>
                     <ul>
                         <li>
-                            <Link href="/">
+                            <Link href="/mentions-legales">
                                 <a>Mentions légales</a>
                             </Link>
                         </li>
                         <li>
                             {" "}
-                            <Link href="/">
+                            <Link href="/politique-de-confidentialite">
                                 <a>Politique de confidentialité</a>
                             </Link>
                         </li>

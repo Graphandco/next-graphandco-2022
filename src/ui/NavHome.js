@@ -10,9 +10,9 @@ const NavHome = () => {
     const text = useRef()
 
     useIsomorphicLayoutEffect(() => {
-        gsap.set(icon.current, { x: -10 })
+        gsap.set(icon.current, { x: -20 })
         gsap.to(icon.current, {
-            x: 0,
+            x: -10,
             opacity: 1,
             duration: 1,
             delay: 0.5,
@@ -20,7 +20,7 @@ const NavHome = () => {
         })
         gsap.set(text.current, { x: -10 })
         gsap.to(text.current, {
-            x: 0,
+            x: -10,
             opacity: 1,
             duration: 1,
             delay: 0.75,
@@ -45,7 +45,6 @@ const NavHome = () => {
                                     height: "45px",
                                     position: "relative",
                                     top: "5px",
-                                    left: "4px",
                                 }}
                             />
                         </div>

@@ -1,5 +1,7 @@
 import Wrapper from "../src/layout/Wrapper"
-import Home from "../src/views/Home"
+import Atouts from "../src/views/home/Atouts"
+import Competences from "../src/views/home/Competences"
+import Hero from "../src/views/home/Hero"
 
 const IndexPage = () => (
     <Wrapper
@@ -11,7 +13,9 @@ const IndexPage = () => (
         imageAlt="Greensock plus Next.js"
         background="linear-gradient(90deg, rgb(3 35 59), rgb(12, 16, 18))"
     >
-        <Home />
+        <Hero />
+        <Competences />
+        <Atouts />
     </Wrapper>
 )
 
